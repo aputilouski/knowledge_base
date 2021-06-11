@@ -1,0 +1,19 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Main</a></li>
+        {% if breadcrumb.breadcrumb_level in "category,post" %}
+        <li class="breadcrumb-item{% if breadcrumb.breadcrumb_level == "category" %} active{% endif %}">
+            {% if breadcrumb.breadcrumb_level == "category" %}
+                {{ breadcrumb.category.name }}
+            {% else %}
+                <a href="/{{ breadcrumb.category.slug }}">{{ breadcrumb.category.name }}</a>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% if breadcrumb.breadcrumb_level == "post" %}
+            <li class="breadcrumb-item active">{{ breadcrumb.post }}</li>
+        {% endif %}
+    </ol>
+</nav>
+<hr>
+<br>

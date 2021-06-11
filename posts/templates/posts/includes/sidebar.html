@@ -1,0 +1,14 @@
+<div class="row">
+    <h6>{{ title }}</h6>
+    <ul class="list-group">
+        {% for item in list %}
+            <li class="list-group-item">
+            {% if item.title %}
+                <a href="/{{ breadcrumb.category.slug }}/{{ item.slug }}">{{ item.title }}</a>
+            {% else %}
+                <a href="/{{ item.slug }}">{{ item.name }}</a>
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

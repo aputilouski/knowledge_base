@@ -1,0 +1,18 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <title>{% block title %}Knowledge Base{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static '/assets/bootstrap-5/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            {% block header %}{% endblock %}
+            {% block breadcrumb %}{% endblock %}
+            {% block content %}{% endblock %}
+        </div>
+        <script src="{% static '/assets/bootstrap-5/js/bootstrap.bundle.js' %}"></script>
+    </body>
+</html>
+

@@ -1,0 +1,17 @@
+{% extends "posts/base.html" %}
+
+
+{% block breadcrumb %}{% endblock %}
+
+
+{% block content %}
+<div>
+    <ul class="list-group list-group-flush">
+    {% for category in categories %}
+        <li class="list-group-item">
+            <a href="/{{ category.slug }}">{{ category.name}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

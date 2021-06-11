@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Knowledge Base | {{ header }}{% endblock %}
+
+
+{% block header %}
+    <br>
+    <h1>{{ header }}</h1>
+    <hr>
+{% endblock %}
+
+{% block breadcrumb %}
+    {% include "posts/includes/breadcrumb.html" %}
+{% endblock %}
+
