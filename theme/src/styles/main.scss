@@ -1,0 +1,15 @@
+@import "~bootstrap";
+
+
+table th, table td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+.editor {
+    overflow-y: scroll;
+    max-height: 740px;
+}
+.breadcrumb > .powered-by {
+    margin-left: auto;
+}
+

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts.apps.PostsConfig',
+    'manifest_loader',
 ]
 
 MIDDLEWARE = [
@@ -121,11 +122,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/public/'
+STATIC_URL = 'public/'
+
+# STATIC_ROOT = BASE_DIR / "public"
 
 STATICFILES_DIRS = [
     BASE_DIR / "public",
 ]
+WEBPACK_FILES = BASE_DIR / "public/dist/"
+MANIFEST_LOADER = {
+    'output_dir': WEBPACK_FILES,
+    'manifest_file': 'manifest.json',
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

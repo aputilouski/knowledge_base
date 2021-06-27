@@ -6,9 +6,12 @@
     <div class="col-3">
         {% include "posts/includes/sidebar.html" with list=category_posts title="Другие записи" %}
     </div>
-    <div class="col-9 editor">
-        <br>
-        {{ post.content|safe }}
+    <div class="col-9">
+        <div class="editor">
+            <br>
+            {{ post.content|safe }}
+        </div>
     </div>
+
 </div>
 {% endblock %}
